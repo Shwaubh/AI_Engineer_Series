@@ -1,0 +1,17 @@
+
+---
+
+Problem
+
+Turn 1:    50 tokens
+Turn 2:   120 tokens
+Turn 3:   200 tokens
+...
+Turn 50: 8,000 tokens  ← approaching the limit
+Turn 60: CONTEXT OVERFLOW — the API rejects your call
+
+---
+
+Strategy 1 — Sliding window: keep only the last N turns
+Strategy 2 — Summarization: compress old history into a summary
+Strategy 3 — Token budgeting: track tokens and trim proactively
